@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Login here</title>
+    <link rel="stylesheet" href="./Login.css">
+    <script src="https://kit.fontawesome.com/d803ed20a9.js" crossorigin="anonymous"></script>
+    <style>
+    body {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlt8HZemItTu3ek7b6dBnhOhSl5YXAp0sNyA&usqp=CAU');
+  background-repeat:no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  width: 25%;
+  margin-top: 0px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+	color:red;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.input {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+label {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 18px;
+  color: #000000;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+input[type="tel"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 5px;
+}
+
+input[type="tel"]:focus + label,
+input[type="tel"]:valid + label,
+input[type="password"]:focus + label,
+input[type="password"]:valid + label {
+  top: -20px;
+  left: 5px;
+  font-size: 14px;
+  color: #008CBA;
+}
+
+.fa-id-badge, .fa-lock {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.forget a {
+  color: #008CBA;
+  text-decoration: none;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #008CBA;
+  cursor: pointer;
+  margin-top: 20px;
+  width:100%;
+}
+
+button[type="reset"] {
+  margin-left: 10px;
+  background-color: #ccc;
+  color: #000;
+}
+
+.register {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.register a {
+  color: #008CBA;
+  text-decoration: none;
+}
+
+#homepage {
+  margin-top: 20px;
+}
+    </style>
+</head>
+<body>
+    <section>
+        <div class="form">
+            <form action="customerlogin" method="post">
+                <h1>Login here</h1>
+                <div class="input">
+                    <input type="tel" name="userid" id="userid" pattern="[0-9]{4}" required>
+                    <label for="userid">Customer_id</label>
+                    <i class="fa-solid fa-id-badge"></i>
+                </div>
+                <div class="input">
+                    <input type="password" name="password" id="password" required>
+                    <label for="password">Password</label>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <div class="forget">
+                    <a href="Signup.html">Forget password</a>
+                </div>
+                <button type="submit">Login</button>
+                <button type="reset">Cancel</button>
+                <div class="register">
+                    <p>don't have account?<a href="Signup.html">Register</a></p>
+                </div>
+                
+            </form>
+            <div id="homepage">
+                    <a href="HomePage.html"><button>HomePage</button></a>
+                </div>
+        </div>
+    </section>
+</body>
+</html>

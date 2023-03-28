@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Signup here</title>
+<style>
+body {
+  background:url('https://img.freepik.com/premium-vector/online-banking-technology-concept-illustration-bank-electric-circuit-lines-background_387612-43.jpg') ;
+}
+h1{
+color:#fff;}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color:transparent;
+  border:2px solid rgba(255,255,255,0.5);
+	border-radius:20px;
+	backdrop-filter:blur(15px);
+  
+}
+
+form input[type=text], 
+form input[type=tel], 
+form input[type=email], 
+form input[type=password], 
+form input[type=date] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form input[type=radio] {
+  margin-right: 10px;
+}
+
+form button[type=reset], 
+form button[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+form button[type=reset]:hover, 
+form button[type=submit]:hover {
+  background-color: #45a049;
+}
+
+form a {
+  color: #4CAF50;
+}
+
+form label {
+  font-weight: bold;
+  color:#fff;
+}
+
+form input[type=text]:focus, 
+form input[type=tel]:focus, 
+form input[type=email]:focus, 
+form input[type=password]:focus, 
+form input[type=date]:focus {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 5px #4CAF50;
+  transition: background-color 0.5s, box-shadow 0.5s;
+}
+</style>
+</head>
+<body>
+<center>
+	
+	<h1>Signup Form</h1>
+	<form action="customersignup" method="post">
+	<table>
+	<tr>
+		<td><label for="name">Name:</label> </td>
+		<td><input type="text" id="name" name="name" required placeholder="Enter your name"> </td>
+	</tr>
+	<tr>
+		<td><label for="mobile">Mobile:</label>
+		<td><input type="tel" id="mobile" name="mobile" required placeholder="Enter your mobile number"></td>
+	</tr>
+	<tr>
+
+		<td><label for="email">Email:</label> </td>
+		<td><input type="email" id="email" name="email" required placeholder="Enter your email address"></td>
+	</tr>
+	<tr>
+
+		<td><label for="password">Password:</label> </td>
+		<td><input type="password" id="password" name="password" required minlength="5"
+			placeholder="Enter your password"></td>
+	</tr>
+	<tr>
+		<td><label>Gender:</label> 
+		<td><input type="radio" id="male" name="gender" value="male" required> 
+		<label
+			for="male">Male</label> <input type="radio" id="female" name="gender"
+			value="female"> <label for="female">Female</label> <input
+			type="radio" id="other" name="gender" value="other"> <label
+			for="other">Other</label> </td><br> <br> 
+	</tr>
+	<tr>
+		<td><label for="dob">Date of Birth:</label> </td>
+		<td><input type="date" id="dob" name="dob" required placeholder="Enter your date of birth"></td>
+	</tr>
+	<tr>
+
+		<td><button type="reset">Cancel</button></td>
+		<td><button type="submit">Signup</button></td>
+	</tr>
+		
+		</table>
+		<br> <br> <a href="Login.html">Already have an account?</a>
+		
+	</form>
+	</center>
+</body>
+</html>

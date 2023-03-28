@@ -1,0 +1,88 @@
+<%@page import="DTO.Customer"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Select Account type</title>
+<style>
+body {
+	
+  background-image:url('data:image/jpeg;base64,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');
+  background-repeat:no-repeat;
+  background-size:cover;
+  overflow:hidden;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  margin: auto;
+  width: 50%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+button[type="reset"], button[type="submit"] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+button[type="reset"]:hover, button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+button[type="reset"]:focus, button[type="submit"]:focus {
+  outline: none;
+}
+
+</style>
+</head>
+<body>
+<center class="container">
+  <%Customer cust=(Customer)session.getAttribute("cust");
+     if(cust==null)
+     {
+     response.getWriter().print("<h1>session expired kindly login again</h1>");
+     request.getRequestDispatcher("Login.html").include(request, response);
+     }else{%>
+    <h1>Hello <%=cust.getName() %> </h1>
+    <h1>select type of account</h1>
+    <form action="createbankaccount">
+      <label><input type="radio" name="banktype" required="required" value="saving">Saving</label><br>
+      <label><input type="radio" name="banktype" value="current">Current</label><br>
+      <br>
+      <button type="reset">Cancel</button>
+      <button type="submit">Submit</button>
+    </form>
+  <%} %>
+</center>
+</body>
+</html>
